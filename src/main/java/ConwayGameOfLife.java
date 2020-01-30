@@ -24,7 +24,6 @@ public class ConwayGameOfLife {
 
         life.nextGen(myGrid);
     }
-
     static void fillGrid(String string, String[][] myGrid) {
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++){
@@ -40,7 +39,6 @@ public class ConwayGameOfLife {
             }
         }
     }
-
     void nextGen(String[][] myGrid) {
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++){
