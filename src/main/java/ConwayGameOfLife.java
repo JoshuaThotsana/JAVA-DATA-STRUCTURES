@@ -23,7 +23,6 @@ public class ConwayGameOfLife {
         System.out.println("\nNext generation\n");
 
         life.nextGen(myGrid);
-        System.out.println(neighbors(2,3,myGrid));
     }
 
     static void fillGrid(String string, String[][] myGrid) {
@@ -43,6 +42,11 @@ public class ConwayGameOfLife {
     }
 
     void nextGen(String[][] myGrid) {
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++){
+                nextGeneration[i][j] = "+";
+            }
+        }
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
                 if (myGrid[i][j].trim().equals("#") && (neighbors(i,j,myGrid) < 2)) {
