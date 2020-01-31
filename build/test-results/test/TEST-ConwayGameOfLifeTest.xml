@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ConwayGameOfLifeTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-01-31T08:27:22" hostname="thotsana-ThinkPad-P50" time="0.008">
+<testsuite name="ConwayGameOfLifeTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-01-31T08:30:32" hostname="thotsana-ThinkPad-P50" time="0.009">
   <properties/>
-  <testcase name="nextGen()" classname="ConwayGameOfLifeTest" time="0.008"/>
+  <testcase name="nextGen()" classname="ConwayGameOfLifeTest" time="0.009"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

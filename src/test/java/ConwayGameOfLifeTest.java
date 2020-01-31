@@ -38,6 +38,6 @@ class ConwayGameOfLifeTest {
                 }
             }
         }
-        assertEquals(true,results);
+        assertTrue(results);
     }
 }
