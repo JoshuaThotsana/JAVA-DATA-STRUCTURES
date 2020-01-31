@@ -2,8 +2,6 @@ import java.util.Arrays;
 
 public class ConwayGameOfLife {
 
-    String[][] nextGeneration = new String[10][10];
-
     public static void main(String[] args) {
 
         ConwayGameOfLife life = new ConwayGameOfLife();
@@ -11,18 +9,18 @@ public class ConwayGameOfLife {
         String[][] myGrid = new String[10][10];
         String input = "/ + + # + + +\n" +
                 "/ + + # # # +\n" +
-                "/ + + + + + +";;
+                "/ + + + + + +";
 
         fillGrid(input,myGrid);
-        System.out.println(neighbors(2,3,myGrid));
         System.out.println("Input\n");
         for (int i = 0; i < 10; i++) {
             System.out.println(Arrays.toString(myGrid[i]));
         }
-        System.out.println("\n");
         System.out.println("\nNext generation\n");
 
-        life.nextGen(myGrid);
+        for (int i = 0; i < 10; i++) {
+            System.out.println(Arrays.toString(life.nextGen(myGrid)[i]));
+        }
     }
     static void fillGrid(String string, String[][] myGrid) {
         for (int i = 0; i < 10; i++) {
@@ -39,7 +37,8 @@ public class ConwayGameOfLife {
             }
         }
     }
-    void nextGen(String[][] myGrid) {
+    public String[][] nextGen(String[][] myGrid) {
+        String[][] nextGeneration = new String[10][10];
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++){
                 nextGeneration[i][j] = "+";
@@ -61,14 +60,12 @@ public class ConwayGameOfLife {
                 }
             }
         }
-        for (int i = 0; i < 10; i++) {
-            System.out.println(Arrays.toString(nextGeneration[i]));
-        }
+        return nextGeneration;
     }
-
     static boolean isPath(int i, int j) {
         return (i <= 9 && i >= 0) && (j <= 9 && j >= 0);
     }
+
     static int neighbors(int i, int j,String[][] myGrid){
         int numberOfNeighbors = 0;
         if (isPath((i-1),(j-1))) {
@@ -113,5 +110,4 @@ public class ConwayGameOfLife {
         }
         return numberOfNeighbors;
     }
-
 }
